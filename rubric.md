@@ -30,19 +30,19 @@ ___yes__ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowerca
 
 ### Level 3 (3 pts)
 
-_____ 1 pt: Makes all appropriate mirror replacements
+___yes__ 1 pt: Makes all appropriate mirror replacements
 
-_____ 1 pt: Stores transcript of the conversation in an array
+___yes__ 1 pt: Stores transcript of the conversation in an array
 
-_____ 1 pt: Prints transcript when terminating
+___yes__ 1 pt: Prints transcript when terminating
 
 ## Kudos:
 
-_____ (Kudos!) Handles mirror words with punctuation
+___idk__ (Kudos!) Handles mirror words with punctuation
 
-_____ (Kudos!) Generates output with correct punctuation & capitalization
+_idk____ (Kudos!) Generates output with correct punctuation & capitalization
 
-_____ (Kudos!) Handles you --> me/I dilemma
+__idk___ (Kudos!) Handles you --> me/I dilemma
 
 
 

@@ -27,7 +27,6 @@ class Conversation {
         mirrorWords.add("your");
 
     boolean checkmirror  = false;
-
     for(String word : words){
       if (mirrorWords.contains(word)){
             responseString += mirrorWord(word) + " ";
@@ -37,6 +36,7 @@ class Conversation {
             responseString += word + " ";
           }
       }
+    
     if(checkmirror){
       transcript.add(responseString);
         return responseString;
