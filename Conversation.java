@@ -68,9 +68,9 @@ class Conversation {
   public String cannedWord(){
     String[] cannedResponses = {
       "Interesting...",
-      "Tell me more.",
-      "I see.",
-      "Fascinating."
+      "Wow...",
+      "Great!",
+      "Heyheyhey"
     };
     int index = ran.nextInt(cannedResponses.length);
     return cannedResponses[index];
