@@ -40,8 +40,8 @@ class Conversation {
       
       case 2:
         String response2 = cannedWord();
-        System.out.println(response2);
-        break;
+        return response2;
+
     }
     return "";
   }
@@ -83,7 +83,7 @@ class Conversation {
     System.out.println("Hey, what's on your mind?");
     Conversation conversation = new Conversation(a);
     
-    for (int j = 0; j < a; j++) {
+    for (int j = 0; j <= a; j++) {
       String printString = conversation.Response();
       System.out.println(printString);
     }
