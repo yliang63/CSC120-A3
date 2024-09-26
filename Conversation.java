@@ -17,11 +17,7 @@ class Conversation {
     String inputString = inp.nextLine();
     String[] words = inputString.split(" ");
     String responseString = "";
-    //randomly choose how to responde.
-    int randomNumber = ran.nextInt(2) + 1;
-    switch(randomNumber){
-      case 1:
-        ArrayList<String> mirrorWords = new ArrayList<>();
+    ArrayList<String> mirrorWords = new ArrayList<>();
         mirrorWords.add("I");
         mirrorWords.add("me");
         mirrorWords.add("am");
@@ -29,21 +25,25 @@ class Conversation {
         mirrorWords.add("my");
         mirrorWords.add("your");
 
-        for(String word : words){
-          if (mirrorWords.contains(word)){
+    boolean checkmirror  = false;
+
+    for(String word : words){
+      if (mirrorWords.contains(word)){
             responseString += mirrorWord(word) + " ";
-          } else {
+            checkmirror = true;
+          } 
+      else {
             responseString += word + " ";
           }
-        }
+      }
+    if(checkmirror){
         return responseString;
-      
-      case 2:
+      }
+    else{
         String response2 = cannedWord();
         return response2;
+      }
 
-    }
-    return "";
   }
 
   public String mirrorWord(String a){
@@ -83,7 +83,7 @@ class Conversation {
     System.out.println("Hey, what's on your mind?");
     Conversation conversation = new Conversation(a);
     
-    for (int j = 0; j <= a; j++) {
+    for (int j = 0; j <= a-1; j++) {
       String printString = conversation.Response();
       System.out.println(printString);
     }
