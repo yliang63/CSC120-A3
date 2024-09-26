@@ -5,11 +5,12 @@ import java.util.Random;
 class Conversation {
   
   private int round;
-  private Random ran;
+  private ArrayList<String> transcript;
+
 
   public Conversation(int a){
     this.round = a;
-    this.ran = new Random();
+    this.transcript = new ArrayList<>();
   }
 
   public String Response(){
@@ -37,10 +38,12 @@ class Conversation {
           }
       }
     if(checkmirror){
+      transcript.add(responseString);
         return responseString;
       }
     else{
         String response2 = cannedWord();
+        transcript.add(response2);
         return response2;
       }
 
@@ -72,22 +75,34 @@ class Conversation {
       "Great!",
       "Heyheyhey"
     };
+    Random ran = new Random();
     int index = ran.nextInt(cannedResponses.length);
     return cannedResponses[index];
   }
 
+  public ArrayList<String> getTranscript() {
+    return transcript;
+  }
+
   public static void main(String[] arguments) {
+     
     System.out.println("Enter your round number:");
     Scanner sc = new Scanner(System.in);
     int a = sc.nextInt();
     System.out.println("Hey, what's on your mind?");
     Conversation conversation = new Conversation(a);
-    
+    ArrayList<String> transcript = conversation.getTranscript();
+    transcript.add("Hey, what's on your mind?");
     for (int j = 0; j <= a-1; j++) {
       String printString = conversation.Response();
       System.out.println(printString);
     }
-    
     System.out.println("See Yah!");
+
+    transcript.add("See Yah!");
+    System.out.println("\nTranscript:");
+    for (String entry : transcript) {
+      System.out.println(entry);
+    }
   }
 }

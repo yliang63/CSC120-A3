@@ -22,11 +22,11 @@ __yes___ 1 pt: Allocates static array of canned responses
 
 ### Level 2 (3 pts)
 
-_____ 1 pt: Uses a canned response when no mirror words detected
+___yes__ 1 pt: Uses a canned response when no mirror words detected
 
-_____ 1 pt: Detects the requested set of mirror words (at minimum)
+___yes__ 1 pt: Detects the requested set of mirror words (at minimum)
 
-_____ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
+___yes__ 1 pt: Replaces simple mirror words appropriately (unpunctuated, lowercase)
 
 ### Level 3 (3 pts)
 
